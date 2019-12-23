@@ -1,2 +1,2 @@
 # CalendarTT
-Smooth and calendar calendar made in SwiftUI
+Smooth and awesome calendar made in SwiftUI
