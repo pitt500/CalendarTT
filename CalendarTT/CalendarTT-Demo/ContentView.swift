@@ -15,15 +15,7 @@ struct ContentView: View {
   }
   
   var body: some View {
-    List {
-      ForEach(Month.all()) { month in
-        
-        VStack(alignment: .leading) {
-          Text("\(month.name)")
-          MonthCell()
-        }
-      }
-    }
+    CalendarView()
   }
 }
 
@@ -33,22 +25,5 @@ struct ContentView_Previews: PreviewProvider {
       ContentView().previewDevice("iPhone SE")
       ContentView().previewDevice("iPhone 11 Pro Max")
     }
-  }
-}
-
-struct Month: Identifiable {
-  let id = UUID()
-  let name: String
-  
-  
-  static func all() -> [Month] {
-    return [
-      Month(name: "September"),
-      Month(name: "September"),
-      Month(name: "September"),
-      Month(name: "September"),
-      Month(name: "September"),
-      Month(name: "September")
-    ]
   }
 }

@@ -16,6 +16,7 @@
 		B5FA74AF23B0ABF0006A370C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA749D23B0A930006A370C /* ContentView.swift */; };
 		B5FA74B123B70550006A370C /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA74B023B70550006A370C /* DayCell.swift */; };
 		B5FA74B323B71FA9006A370C /* MonthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA74B223B71FA9006A370C /* MonthCell.swift */; };
+		B5FA74B623B84786006A370C /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA74B523B84786006A370C /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B5FA74A723B0A931006A370C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5FA74B023B70550006A370C /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
 		B5FA74B223B71FA9006A370C /* MonthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCell.swift; sourceTree = "<group>"; };
+		B5FA74B523B84786006A370C /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				B5FA74A123B0A931006A370C /* Preview Content */,
 				B5FA74B023B70550006A370C /* DayCell.swift */,
 				B5FA74B223B71FA9006A370C /* MonthCell.swift */,
+				B5FA74B523B84786006A370C /* CalendarView.swift */,
 			);
 			path = "CalendarTT-Demo";
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			files = (
 				B5FA74B323B71FA9006A370C /* MonthCell.swift in Sources */,
 				B5FA749A23B0A930006A370C /* AppDelegate.swift in Sources */,
+				B5FA74B623B84786006A370C /* CalendarView.swift in Sources */,
 				B5FA74AF23B0ABF0006A370C /* ContentView.swift in Sources */,
 				B5FA749C23B0A930006A370C /* SceneDelegate.swift in Sources */,
 				B5FA74B123B70550006A370C /* DayCell.swift in Sources */,
