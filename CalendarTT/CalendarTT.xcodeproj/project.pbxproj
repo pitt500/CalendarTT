@@ -84,6 +84,7 @@
 		B5FA749823B0A930006A370C /* CalendarTT-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				B5FA74B723B84888006A370C /* Views */,
 				B5FA749923B0A930006A370C /* AppDelegate.swift */,
 				B5FA749B23B0A930006A370C /* SceneDelegate.swift */,
 				B5FA749D23B0A930006A370C /* ContentView.swift */,
@@ -91,9 +92,6 @@
 				B5FA74A423B0A931006A370C /* LaunchScreen.storyboard */,
 				B5FA74A723B0A931006A370C /* Info.plist */,
 				B5FA74A123B0A931006A370C /* Preview Content */,
-				B5FA74B023B70550006A370C /* DayCell.swift */,
-				B5FA74B223B71FA9006A370C /* MonthCell.swift */,
-				B5FA74B523B84786006A370C /* CalendarView.swift */,
 			);
 			path = "CalendarTT-Demo";
 			sourceTree = "<group>";
@@ -104,6 +102,16 @@
 				B5FA74A223B0A931006A370C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B5FA74B723B84888006A370C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B5FA74B023B70550006A370C /* DayCell.swift */,
+				B5FA74B223B71FA9006A370C /* MonthCell.swift */,
+				B5FA74B523B84786006A370C /* CalendarView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
