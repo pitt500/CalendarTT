@@ -18,19 +18,24 @@ struct MonthCell: View {
   }
   
   var body: some View {
-    List(1...5, id: \.self) { row in
-      ForEach(1...7, id: \.self) { column in
-        GeometryReader { geometry in
-          DayCell(value: column)
-            .frame(width: self.cellWidth, height: self.cellHeight)
-            .background(row % 2 == 0 ? Color.red : Color.yellow)
+    VStack{
+      ForEach(1...5, id: \.self) { row in
+        HStack {
+          ForEach(21...27, id: \.self) { column in
+            GeometryReader { geometry in
+              DayCell(value: column)
+                .frame(width: self.cellWidth, height: self.cellHeight)
+                .background(row % 2 == 0 ? Color.red : Color.yellow)
+            }
+            .frame(height: self.cellHeight)
+            .background(Color.green)
+            .padding(.vertical, -6)
+            
+          }
         }
-        .frame(height: self.cellHeight)
-        .background(Color.green)
-        .padding(.vertical, -6)
-        
-      }
-    }.frame(height: cellHeight * 5)
+      }//.frame(height: cellHeight * 5)
+    }
+    
   }
 }
 
