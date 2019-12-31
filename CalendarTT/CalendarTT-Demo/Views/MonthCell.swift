@@ -10,30 +10,30 @@ import SwiftUI
 
 struct MonthCell: View {
   
-  private var cellWidth: CGFloat = UIScreen.main.bounds.width / 7
-  private var cellHeight: CGFloat = UIScreen.main.bounds.width / 7
-  
   init() {
     UITableView.appearance().separatorStyle = .none
   }
   
   var body: some View {
-    VStack{
+    
+    let cellWidth = (UIScreen.main.bounds.width < UIScreen.main.bounds.height) ? UIScreen.main.bounds.width / 7 : UIScreen.main.bounds.height / 7
+    
+    return VStack{
       ForEach(1...5, id: \.self) { row in
         HStack {
           ForEach(21...27, id: \.self) { column in
             GeometryReader { geometry in
-              DayCell(value: column)
-                .frame(width: self.cellWidth, height: self.cellHeight)
-                .background(row % 2 == 0 ? Color.red : Color.yellow)
+              return DayCell(value: column)
+              .frame(width: geometry.size.width, height: geometry.size.height)
+              .background(row % 2 == 0 ? Color.red : Color.yellow)
             }
-            .frame(height: self.cellHeight)
+            .frame(height: cellWidth)
             .background(Color.green)
-            .padding(.vertical, -6)
+            .padding([.vertical, .horizontal], -6)
             
           }
         }
-      }//.frame(height: cellHeight * 5)
+      }
     }
     
   }
