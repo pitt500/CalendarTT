@@ -10,14 +10,17 @@ import SwiftUI
 
 struct MonthCell: View {
   
-  init() {
+  var width: CGFloat?
+  var height: CGFloat?
+  
+  init(width: CGFloat? = nil, height: CGFloat? = nil) {
+    self.width = width
+    self.height = height
     UITableView.appearance().separatorStyle = .none
   }
   
   var body: some View {
-    
-    let cellWidth = (UIScreen.main.bounds.width < UIScreen.main.bounds.height) ? UIScreen.main.bounds.width / 7 : UIScreen.main.bounds.height / 7
-    
+  
     return VStack{
       ForEach(1...5, id: \.self) { row in
         HStack {
@@ -27,7 +30,7 @@ struct MonthCell: View {
               .frame(width: geometry.size.width, height: geometry.size.height)
               .background(row % 2 == 0 ? Color.red : Color.yellow)
             }
-            .frame(height: cellWidth)
+            .frame(width: self.width, height: self.height)
             .background(Color.green)
             .padding([.vertical, .horizontal], -6)
             

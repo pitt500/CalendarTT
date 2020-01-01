@@ -10,12 +10,22 @@ import SwiftUI
 
 struct ContentView: View {
   
+  @State private var isVertical = true
+  
   init() {
     UITableView.appearance().separatorStyle = .none
   }
   
   var body: some View {
-    CalendarView()
+    
+    VStack {
+      Button("Press me") {
+        self.isVertical.toggle()
+      }
+      
+      CalendarView(scrollMode: self.isVertical ? .vertical : .horizontal)
+        //.frame(width: 400, height: 400)
+    }
   }
 }
 

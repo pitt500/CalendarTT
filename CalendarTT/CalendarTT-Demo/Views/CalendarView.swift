@@ -8,19 +8,47 @@
 
 import SwiftUI
 
+//enum ScrollMode {
+//  case horizontal
+//  case vertical
+//}
+
 struct CalendarView: View {
   
-  init() {
+  var scrollMode: Axis.Set
+  
+  init(scrollMode: Axis.Set = .vertical) {
+    self.scrollMode = scrollMode
     UITableView.appearance().separatorStyle = .none
   }
   
   var body: some View {
-    List {
-      ForEach(Month.all()) { month in
+    let cellWidth = (UIScreen.main.bounds.width < UIScreen.main.bounds.height) ? UIScreen.main.bounds.width / 7 : UIScreen.main.bounds.height / 7
+    
+    let cellHeight = (UIScreen.main.bounds.width < UIScreen.main.bounds.height) ? UIScreen.main.bounds.width / 7 : UIScreen.main.bounds.height / 7
+    
+    return ScrollView(self.scrollMode) {
+      
+      //let stack = (self.scrollMode == .horizontal) ? HStack() : VStack()
+      
+      if self.scrollMode == .horizontal {
         
-        VStack(alignment: .leading) {
-          Text("\(month.name)")
-          MonthCell()
+        HStack {
+          ForEach(Month.all()) { month in
+            VStack(alignment: .leading) {
+              Text("\(month.name)")
+              MonthCell(width: cellWidth)
+            }.padding()
+          }
+        }
+      } else {
+        VStack {
+          ForEach(Month.all()) { month in
+            VStack(alignment: .leading) {
+              Text("\(month.name)")
+              MonthCell(height: cellHeight)
+            }.padding()
+          }
         }
       }
     }
