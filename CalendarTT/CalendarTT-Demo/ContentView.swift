@@ -23,8 +23,8 @@ struct ContentView: View {
         self.isVertical.toggle()
       }
       
-      CalendarView(scrollMode: self.isVertical ? .vertical : .horizontal)
-        //.frame(width: 400, height: 400)
+      CalendarView(scrollMode: self.isVertical ? .vertical : .horizontal, dayWidth: 300, dayHeight: 300)
+        .frame(width: 400, height: 400)
     }
   }
 }
